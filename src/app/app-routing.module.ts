@@ -4,6 +4,7 @@ import { AppComponent } from "./app.component";
 import { Routes, RouterModule } from "@angular/router";
 import { ReviewComponent } from "./review/review.component";
 import { MainComponent } from "./main/main.component";
+import { APP_BASE_HREF } from "@angular/common";
 
 const routes: Routes = [
   { path: "", component: MainComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
+  providers: [{ provide: APP_BASE_HREF, useValue: "/my/app" }],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
