@@ -8,9 +8,9 @@ import { APP_BASE_HREF } from "@angular/common";
 import { CameraManComponent } from "./camera-man/camera-man.component";
 
 const routes: Routes = [
-  { path: "", component: MainComponent },
+  // { path: "", component: MainComponent },
   { path: "review", component: ReviewComponent },
-  { path: "camera", component: CameraManComponent }
+  { path: "", component: CameraManComponent }
 ];
 
 @NgModule({

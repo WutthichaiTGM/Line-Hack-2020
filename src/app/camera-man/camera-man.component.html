@@ -12,14 +12,15 @@
 
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
 
+	<!-- <label>
+    ชื่อ :
+    <input type="text" formControlName="name">
+  </label> -->
+	<!-- <br> -->
 	<label>
-    First Name:
-    <input type="text" formControlName="firstName">
+    เบอร์โทร :
+    <input type="text" formControlName="phone">
   </label>
 	<br>
-	<label>
-    Last Name:
-    <input type="text" formControlName="lastName">
-  </label>
 	<button type="submit" [disabled]="!profileForm.valid">Submit</button>
 </form>

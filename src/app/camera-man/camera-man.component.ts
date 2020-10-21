@@ -11,16 +11,30 @@ export class CameraManComponent implements OnInit {
   constructor(private afs: AngularFirestore) {}
 
   profileForm = new FormGroup({
-    firstName: new FormControl(""),
-    lastName: new FormControl("")
+    name: new FormControl(""),
+    phone: new FormControl("")
   });
 
   ngOnInit() {
-    // this.main();
+    this.main();
   }
-  onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.profileForm.value);
+  async onSubmit() {
+    // console.warn(this.profileForm.value);
+    // console.log("Name:", this.profileForm.get("name").value);
+
+    // const name = this.profileForm.get("name").value
+    const phone = this.profileForm.get("phone").value;
+    const profile = await liff.getProfile();
+    const DisplayName = profile.displayName;
+    const Uid = profile.userId;
+    this.afs
+      .collection("CameraMan")
+      .doc(Uid)
+      .set({
+        name: DisplayName,
+        uid: Uid,
+        phone: phone
+      });
   }
 
   async getUserProfile() {
@@ -41,8 +55,8 @@ export class CameraManComponent implements OnInit {
       .collection("CameraMan")
       .doc(Uid)
       .set({
-        uid: Uid,
-        name: DisplayName
+        name: DisplayName,
+        uid: Uid
       });
   }
 
