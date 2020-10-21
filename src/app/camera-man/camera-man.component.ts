@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CameraManComponent implements OnInit {
 
   constructor() { }
-
+ value = 'Clear me';
   ngOnInit() {
   }
 
