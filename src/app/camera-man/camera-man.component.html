@@ -1,13 +1,11 @@
-<mat-form-field class="example-form-field">
-	<div class="center">
-		<mat-label>ชื่อ-นามสกุล</mat-label>
+<mat-form-field>
+	<div>
+		<mat-label>ชื่อ-นามสกุล :</mat-label>
 		<input matInput type="text" name='name'>
 	</div>
-		<div class="center">
-			<mat-label>เบอร์โทร</mat-label>
-			<input matInput type="text" name='name'>
+		<div>
+			<mat-label>เบอร์โทร :</mat-label>
+			<input matInput type="number" name='phone'>
 	</div>
-			<button mat-button >ตกลง</button>
+			<button mat-button (click)="adduser()">ตกลง</button>
 </mat-form-field>
-
-
