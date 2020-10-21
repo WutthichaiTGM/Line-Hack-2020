@@ -5,10 +5,12 @@ import { Routes, RouterModule } from "@angular/router";
 import { ReviewComponent } from "./review/review.component";
 import { MainComponent } from "./main/main.component";
 import { APP_BASE_HREF } from "@angular/common";
+import { CameraManComponent } from "./camera-man/camera-man.component";
 
 const routes: Routes = [
   { path: "", component: MainComponent },
-  { path: "review", component: ReviewComponent }
+  { path: "review", component: ReviewComponent },
+  { path: "camera", component: CameraManComponent }
 ];
 
 @NgModule({

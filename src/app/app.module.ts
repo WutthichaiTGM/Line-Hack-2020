@@ -6,6 +6,7 @@ import { AngularFireModule } from "@angular/fire";
 import { AppComponent } from "./app.component";
 import { MainComponent } from "./main/main.component";
 import { environment } from "./environments/environments.component";
+import { CameraManComponent } from './camera-man/camera-man.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { environment } from "./environments/environments.component";
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
-  declarations: [AppComponent, MainComponent],
+  declarations: [AppComponent, MainComponent, CameraManComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
