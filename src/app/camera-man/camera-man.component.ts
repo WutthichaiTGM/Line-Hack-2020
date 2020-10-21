@@ -9,7 +9,9 @@ import { FormControl } from "@angular/forms";
 })
 export class CameraManComponent implements OnInit {
   constructor(private afs: AngularFirestore) {}
+
   name = new FormControl("");
+
   ngOnInit() {
     // this.main();
   }
