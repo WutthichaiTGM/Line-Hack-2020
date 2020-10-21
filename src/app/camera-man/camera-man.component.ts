@@ -10,7 +10,7 @@ export class CameraManComponent implements OnInit {
   constructor(private afs: AngularFirestore) {}
 
   ngOnInit() {
-    // this.main();
+    this.main();
   }
 
   async getUserProfile() {
@@ -41,6 +41,7 @@ export class CameraManComponent implements OnInit {
     liff.ready.then(() => {
       if (liff.isLoggedIn()) {
         this.getUserProfile();
+        // this.adduser();
       } else {
         liff.login();
       }
