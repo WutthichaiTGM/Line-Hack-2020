@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import liff from "@line/liff";
 import { AngularFirestore } from "@angular/fire/firestore";
-import { FormControl } from "@angular/forms";
+import { FormGroup, FormControl } from "@angular/forms";
 @Component({
   selector: "app-camera-man",
   templateUrl: "./camera-man.component.html",
@@ -10,10 +10,17 @@ import { FormControl } from "@angular/forms";
 export class CameraManComponent implements OnInit {
   constructor(private afs: AngularFirestore) {}
 
-  name = new FormControl("");
+  profileForm = new FormGroup({
+    firstName: new FormControl(""),
+    lastName: new FormControl("")
+  });
 
   ngOnInit() {
     // this.main();
+  }
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.profileForm.value);
   }
 
   async getUserProfile() {

@@ -31,6 +31,7 @@ import { MatTreeModule } from "@angular/material/tree";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { MatGridListModule } from "@angular/material/grid-list";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ReactiveFormsModule } from "@angular/forms";
 @NgModule({
   imports: [
     BrowserModule,
@@ -60,7 +61,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     MatTreeModule,
     MatButtonToggleModule,
     MatGridListModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   declarations: [AppComponent, MainComponent, CameraManComponent],
   bootstrap: [AppComponent]
